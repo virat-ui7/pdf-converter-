@@ -17,7 +17,7 @@ export default function HowItWorksPage() {
       number: '1',
       title: 'Upload Your File',
       description:
-        'Drag and drop your file into the converter, or click to browse and select a file. We support 110+ formats including PDF, DOCX, JPG, PNG, XLSX, and more.',
+        'Drag and drop your file into the converter, or click to browse and select a file. We support 117 formats including PDF, DOCX, JPG, PNG, XLSX, and more.',
       icon: '📤',
       details: [
         'No account required for free tier',
@@ -33,7 +33,7 @@ export default function HowItWorksPage() {
         'Choose the format you want to convert to. Our smart converter will show you compatible formats based on your source file.',
       icon: '🎯',
       details: [
-        'Search or browse 110+ formats',
+        'Search or browse 117 formats',
         'See format compatibility',
         'Preview conversion options',
         'Advanced options available (quality, compression)',
@@ -113,7 +113,7 @@ export default function HowItWorksPage() {
                         <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-3xl font-bold">
                           {step.number}
                         </div>
-                        <div className="text-5xl">{step.icon}</div>
+                        <div className="text-4xl">{step.icon}</div>
                       </div>
                       <h2 className="text-3xl font-bold mb-4 text-neutral-black">
                         {step.title}
@@ -136,7 +136,7 @@ export default function HowItWorksPage() {
                   </div>
                   <div className="flex-1">
                     <div className="bg-neutral-light-gray rounded-lg p-8 text-center">
-                      <div className="text-6xl mb-4">{step.icon}</div>
+                      <div className="text-4xl mb-4">{step.icon}</div>
                       <p className="text-neutral-medium-gray">
                         Step {step.number} of 3
                       </p>

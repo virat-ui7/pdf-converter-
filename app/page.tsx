@@ -3,11 +3,12 @@ import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
+import { getFormatsByCategory } from '@/lib/formats'
 
 export const metadata = {
-  title: 'FileConverter - Convert 110+ File Formats Instantly | Free Online Converter',
+  title: 'FileConverter - Convert 117 File Formats Instantly | Free Online Converter',
   description:
-    'Convert documents, images, spreadsheets, and presentations to 110+ formats. Fast, secure, and free. No registration required.',
+    'Convert documents, images, spreadsheets, and presentations to 117 formats. Fast, secure, and free. No registration required.',
   keywords: 'file converter, pdf converter, image converter, document converter',
 }
 
@@ -17,18 +18,49 @@ export default function HomePage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-orange-500 to-orange-600 text-white py-20 md:py-32">
-        <div className="container-custom">
+      <section className="relative bg-gradient-to-br from-primary via-orange-500 to-orange-600 text-white py-20 md:py-32 overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        </div>
+        <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
+            {/* Trust Badge */}
+            <div className="flex items-center justify-center gap-2 mb-6">
+              <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="text-sm font-medium">SSL Secured • 100% Private</span>
+              </div>
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Convert 110+ File Formats Instantly
+              Convert 117 File Formats Instantly
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-orange-50">
               Fast, Secure, Free Online File Converter
             </p>
+            {/* Stats */}
+            <div className="flex flex-wrap items-center justify-center gap-6 mb-8 text-orange-50">
+              <div className="text-center">
+                <div className="text-2xl font-bold">10M+</div>
+                <div className="text-sm">Files Converted</div>
+              </div>
+              <div className="w-px h-8 bg-white/30"></div>
+              <div className="text-center">
+                <div className="text-2xl font-bold">50K+</div>
+                <div className="text-sm">Happy Users</div>
+              </div>
+              <div className="w-px h-8 bg-white/30"></div>
+              <div className="text-center">
+                <div className="text-2xl font-bold">99.9%</div>
+                <div className="text-sm">Uptime</div>
+              </div>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/convert">
-                <Button variant="secondary" size="lg" className="w-full sm:w-auto">
+                <Button variant="secondary" size="lg" className="w-full sm:w-auto shadow-lg hover:shadow-xl transition-shadow">
                   Start Converting Now
                 </Button>
               </Link>
@@ -38,18 +70,39 @@ export default function HomePage() {
                 </Button>
               </Link>
             </div>
+            {/* Trust Indicators */}
+            <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm text-orange-100">
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span>No Credit Card Required</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span>30-Day Money-Back Guarantee</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span>Files Auto-Deleted After 24h</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Value Proposition */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-neutral-light-gray">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center">
-              <div className="w-16 h-16 bg-primary-light rounded-full flex items-center justify-center mx-auto mb-4">
+            <Card className="text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 border-transparent hover:border-primary/20">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <svg
-                  className="w-8 h-8 text-primary"
+                  className="w-8 h-8 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -62,16 +115,16 @@ export default function HomePage() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">110+ Formats</h3>
+              <h3 className="text-xl font-semibold mb-2">117 Formats</h3>
               <p className="text-neutral-medium-gray">
                 Support for documents, images, spreadsheets, and presentations
               </p>
             </Card>
 
-            <Card className="text-center">
-              <div className="w-16 h-16 bg-primary-light rounded-full flex items-center justify-center mx-auto mb-4">
+            <Card className="text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 border-transparent hover:border-primary/20">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <svg
-                  className="w-8 h-8 text-primary"
+                  className="w-8 h-8 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -90,10 +143,10 @@ export default function HomePage() {
               </p>
             </Card>
 
-            <Card className="text-center">
-              <div className="w-16 h-16 bg-primary-light rounded-full flex items-center justify-center mx-auto mb-4">
+            <Card className="text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 border-transparent hover:border-primary/20">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <svg
-                  className="w-8 h-8 text-primary"
+                  className="w-8 h-8 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -123,21 +176,21 @@ export default function HomePage() {
               Supported Formats
             </h2>
             <p className="text-lg text-neutral-medium-gray">
-              Convert between 110+ file formats across 4 categories
+              Convert between 117 file formats across 4 categories
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { name: 'Documents', count: 25, icon: '📄' },
-              { name: 'Images', count: 30, icon: '🖼️' },
-              { name: 'Spreadsheets', count: 20, icon: '📊' },
-              { name: 'Presentations', count: 15, icon: '📽️' },
+              { name: 'Documents', count: getFormatsByCategory('document').length, icon: '📄' },
+              { name: 'Images', count: getFormatsByCategory('image').length, icon: '🖼️' },
+              { name: 'Spreadsheets', count: getFormatsByCategory('spreadsheet').length, icon: '📊' },
+              { name: 'Presentations', count: getFormatsByCategory('presentation').length, icon: '📽️' },
             ].map((format) => (
               <Card
                 key={format.name}
                 className="text-center hover:shadow-lg transition-shadow cursor-pointer"
               >
-                <div className="text-4xl mb-4">{format.icon}</div>
+                <div className="text-3xl mb-4">{format.icon}</div>
                 <h3 className="text-lg font-semibold mb-2">{format.name}</h3>
                 <p className="text-primary font-medium">{format.count}+ formats</p>
               </Card>
@@ -173,7 +226,7 @@ export default function HomePage() {
               {
                 step: '2',
                 title: 'Select Format',
-                description: 'Choose your desired output format from 110+ options',
+                description: 'Choose your desired output format from 117 options',
                 icon: '🎯',
               },
               {
@@ -184,7 +237,7 @@ export default function HomePage() {
               },
             ].map((item) => (
               <div key={item.step} className="text-center">
-                <div className="w-20 h-20 bg-primary-light rounded-full flex items-center justify-center mx-auto mb-4 text-4xl">
+                <div className="w-16 h-16 bg-primary-light rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
                   {item.icon}
                 </div>
                 <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 font-semibold">
@@ -199,13 +252,27 @@ export default function HomePage() {
       </section>
 
       {/* Pricing Preview */}
-      <section className="py-16 md:py-24 bg-neutral-light-gray">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-neutral-light-gray to-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-semibold mb-4">Simple Pricing</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold mb-4">Simple, Transparent Pricing</h2>
             <p className="text-lg text-neutral-medium-gray">
-              Choose the plan that works for you
+              All plans in USD. Choose the plan that works for you
             </p>
+            <div className="mt-4 flex items-center justify-center gap-4 text-sm">
+              <div className="flex items-center gap-2 text-green-600">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span>30-Day Money-Back Guarantee</span>
+              </div>
+              <div className="flex items-center gap-2 text-blue-600">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span>Secure Payment</span>
+              </div>
+            </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {[
@@ -236,13 +303,20 @@ export default function HomePage() {
             ].map((plan) => (
               <Card
                 key={plan.name}
-                className={`${plan.name === 'Professional' ? 'border-2 border-primary shadow-lg' : ''}`}
+                className={`${plan.name === 'Professional' ? 'border-2 border-primary shadow-xl scale-105' : 'hover:shadow-lg'} transition-all duration-300`}
               >
+                {plan.name === 'Professional' && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-primary text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
                 <div className="text-center mb-6">
                   <h3 className="text-xl font-semibold mb-2">{plan.name}</h3>
                   <div className="mb-4">
                     <span className="text-3xl font-bold text-primary">{plan.price}</span>
-                    <span className="text-neutral-medium-gray">/month</span>
+                    <span className="text-neutral-medium-gray">/month USD</span>
                   </div>
                   <p className="text-sm text-neutral-medium-gray">{plan.conversions}</p>
                 </div>
@@ -356,7 +430,7 @@ export default function HomePage() {
               {
                 question: 'What file formats are supported?',
                 answer:
-                  'We support 110+ formats across documents (PDF, DOCX, etc.), images (JPG, PNG, etc.), spreadsheets (XLSX, CSV, etc.), and presentations (PPTX, etc.).',
+                  'We support 117 formats across documents (43 formats), images (50 formats), spreadsheets (17 formats), and presentations (7 formats).',
               },
               {
                 question: 'Is there a file size limit?',

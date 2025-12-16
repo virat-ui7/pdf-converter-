@@ -5,9 +5,9 @@ import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Features - FileConverter | 110+ Format Support & More',
+  title: 'Features - FileConverter | 117 Format Support & More',
   description:
-    'Discover all the powerful features of FileConverter: 110+ format support, batch processing, API access, webhooks, and more.',
+    'Discover all the powerful features of FileConverter: 117 format support, batch processing, API access, webhooks, and more.',
   keywords: 'file converter features, batch conversion, API access, webhooks, file conversion features',
 }
 
@@ -17,9 +17,9 @@ export default function FeaturesPage() {
       category: 'Core Features',
       items: [
         {
-          title: '110+ Format Support',
+          title: '117 Format Support',
           description:
-            'Convert between 110+ file formats across documents, images, spreadsheets, and presentations. From PDF to Word, JPG to PNG, and everything in between.',
+            'Convert between 117 file formats across documents (43 formats), images (50 formats), spreadsheets (17 formats), and presentations (7 formats). From PDF to Word, JPG to PNG, and everything in between.',
           icon: '📄',
         },
         {
@@ -173,7 +173,7 @@ export default function FeaturesPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                   {category.items.map((feature, index) => (
                     <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-                      <div className="text-4xl mb-4">{feature.icon}</div>
+                      <div className="text-3xl mb-4">{feature.icon}</div>
                       <h3 className="text-xl font-semibold mb-3 text-neutral-black">
                         {feature.title}
                       </h3>

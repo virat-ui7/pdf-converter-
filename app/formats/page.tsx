@@ -68,7 +68,7 @@ export default function FormatsPage() {
           <div className="container-custom">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                110+ Supported File Formats
+                117 Supported File Formats
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-orange-50">
                 Convert between documents, images, spreadsheets, and presentations
@@ -138,7 +138,7 @@ export default function FormatsPage() {
                         key={format.id}
                         className="p-4 hover:shadow-lg transition-shadow text-center"
                       >
-                        <div className="text-4xl mb-2">{format.icon}</div>
+                        <div className="text-3xl mb-2">{format.icon}</div>
                         <h3 className="font-semibold text-neutral-black mb-1">
                           {format.name}
                         </h3>
@@ -183,7 +183,7 @@ export default function FormatsPage() {
                       className="block"
                     >
                       <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-                        <div className="text-5xl mb-4">{category.icon}</div>
+                        <div className="text-4xl mb-4">{category.icon}</div>
                         <h3 className="text-xl font-semibold mb-2 text-neutral-black">
                           {category.name}
                         </h3>

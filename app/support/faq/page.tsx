@@ -16,7 +16,7 @@ const faqData: FAQItem[] = [
     category: 'General',
     question: 'What file formats does FileConverter support?',
     answer:
-      'FileConverter supports 110+ file formats across 4 categories: Documents (43 formats including PDF, DOCX, ODT, RTF), Spreadsheets (14 formats including XLSX, CSV, ODS), Presentations (7 formats including PPTX, ODP), and Images (47 formats including JPG, PNG, WebP, SVG, HEIC).',
+      'FileConverter supports 117 file formats across 4 categories: Documents (43 formats including PDF, DOCX, ODT, RTF), Spreadsheets (17 formats including XLSX, CSV, ODS), Presentations (7 formats including PPTX, ODP), and Images (50 formats including JPG, PNG, WebP, SVG, HEIC).',
   },
   {
     category: 'General',

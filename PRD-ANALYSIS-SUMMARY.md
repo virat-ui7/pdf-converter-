@@ -33,7 +33,7 @@ A freemium SaaS platform enabling users to convert 110+ file formats across docu
 ## 2. KEY FEATURES
 
 ### Core Features
-- ✓ **110+ Format Support** across 4 categories (Documents: 43, Spreadsheets: 14, Presentations: 7, Images: 47)
+- ✓ **117 Format Support** across 4 categories (Documents: 43, Spreadsheets: 17, Presentations: 7, Images: 50)
 - ✓ **Drag-and-drop** file upload interface
 - ✓ **Batch processing** (unlimited for paid tiers)
 - ✓ **Instant preview** before download
@@ -155,7 +155,7 @@ Backend:
 - Common: PDF, DOC, DOCX, RTF, TXT, ODT, HTML, EPUB, MOBI, etc.
 - Full list not detailed in PRD, but 43 total formats
 
-### Spreadsheets (14 formats)
+### Spreadsheets (17 formats)
 - Common: XLS, XLSX, CSV, ODS, TSV, etc.
 - 14 total formats
 
@@ -167,7 +167,7 @@ Backend:
 - Common: JPG, PNG, GIF, WEBP, SVG, BMP, TIFF, HEIC, AVIF, etc.
 - 47 total formats
 
-**Total: 110+ formats** across 4 categories
+**Total: 117 formats** across 4 categories (Documents: 43, Spreadsheets: 17, Presentations: 7, Images: 50)
 
 ---
 

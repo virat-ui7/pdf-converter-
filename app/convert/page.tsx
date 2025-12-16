@@ -1,19 +1,21 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSession } from 'next-auth/react'
+import { useSearchParams } from 'next/navigation'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { FileUpload } from '@/components/converter/FileUpload'
 import { FormatSelector } from '@/components/converter/FormatSelector'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
-import { getFormatByExtension, formatFileSize, type FileFormat } from '@/lib/formats'
+import { getFormatByExtension, getFormatInfo, formatFileSize, type FileFormat } from '@/lib/formats'
 
 type ConversionState = 'idle' | 'uploaded' | 'processing' | 'completed' | 'error'
 
-export default function ConvertPage() {
+function ConvertPageContent() {
   const { data: session } = useSession()
+  const searchParams = useSearchParams()
   const [file, setFile] = useState<File | null>(null)
   const [sourceFormat, setSourceFormat] = useState<FileFormat | null>(null)
   const [targetFormat, setTargetFormat] = useState<FileFormat | null>(null)
@@ -37,6 +39,26 @@ export default function ConvertPage() {
     'xlsx', 'xls', 'csv', 'ods',
     'pptx', 'ppt', 'odp',
   ]
+
+  // Handle query parameters for pre-selected formats
+  useEffect(() => {
+    const sourceParam = searchParams.get('source')
+    const targetParam = searchParams.get('target')
+
+    if (sourceParam) {
+      const source = getFormatInfo(sourceParam)
+      if (source) {
+        setSourceFormat(source)
+      }
+    }
+
+    if (targetParam) {
+      const target = getFormatInfo(targetParam)
+      if (target) {
+        setTargetFormat(target)
+      }
+    }
+  }, [searchParams])
 
   const handleFileSelect = (selectedFile: File, format: FileFormat) => {
     setFile(selectedFile)
@@ -328,6 +350,21 @@ export default function ConvertPage() {
 
       <Footer />
     </div>
+  )
+}
+
+export default function ConvertPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-neutral-medium-gray">Loading...</p>
+        </div>
+      </div>
+    }>
+      <ConvertPageContent />
+    </Suspense>
   )
 }
 

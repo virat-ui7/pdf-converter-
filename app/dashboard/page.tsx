@@ -203,7 +203,7 @@ export default function DashboardPage() {
                 <div className="text-4xl mb-4">🔄</div>
                 <h3 className="font-semibold mb-2">Start New Conversion</h3>
                 <p className="text-sm text-neutral-medium-gray">
-                  Convert files to 110+ formats
+                  Convert files to 117 formats
                 </p>
               </Card>
             </Link>

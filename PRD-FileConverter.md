@@ -10,7 +10,7 @@
 
 ## EXECUTIVE SUMMARY
 
-A freemium SaaS file converter platform supporting 110+ formats across documents, spreadsheets, presentations, and images. Three-tier monetization: Free (ad-supported), India-focused paid tier (₹49.99-₹399.99/month), and Global paid tier ($4.99-$49.99/month).
+A freemium SaaS file converter platform supporting 117 formats across documents, spreadsheets, presentations, and images. Three-tier monetization: Free (ad-supported), India-focused paid tier (₹49.99-₹399.99/month), and Global paid tier ($4.99-$49.99/month).
 
 **Key Metrics:**
 - TAM: 600,000 users/year
@@ -27,7 +27,7 @@ A freemium SaaS file converter platform supporting 110+ formats across documents
 Enable seamless file format conversion across documents, spreadsheets, presentations, and images with a lightweight, privacy-first interface. Monetize through ads (free tier) and subscriptions (paid tiers).
 
 ### 1.2 Core Features
-- **110+ Format Support** across 4 categories
+- **117 Format Support** across 4 categories (Documents: 43, Spreadsheets: 17, Presentations: 7, Images: 50)
 - **Drag-and-drop** file upload interface
 - **Batch processing** (unlimited for paid tiers)
 - **Instant preview** before download
@@ -309,14 +309,14 @@ FileConverter.com/
   - Icon
 
 **3.4.2 Spreadsheets Page** (`/formats/spreadsheets`)
-- List all 14 spreadsheet formats
+- List all 17 spreadsheet formats
 - Same structure as documents
 
 **3.4.3 Presentations Page** (`/formats/presentations`)
 - List all 7 presentation formats
 
 **3.4.4 Images Page** (`/formats/images`)
-- List all 47 image formats
+- List all 50 image formats
 - Additional info: Compression, DPI, color modes
 
 ---

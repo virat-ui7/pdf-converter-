@@ -4,11 +4,11 @@ import { Providers } from '@/components/providers/Providers'
 
 export const metadata: Metadata = {
   title: {
-    default: 'FileConverter - Convert 110+ File Formats Instantly',
+    default: 'FileConverter - Convert 117 File Formats Instantly',
     template: '%s | FileConverter',
   },
   description:
-    'Convert documents, images, spreadsheets, and presentations to 110+ formats. Fast, secure, and free. No registration required.',
+    'Convert documents, images, spreadsheets, and presentations to 117 formats. Fast, secure, and free. No registration required.',
   keywords: [
     'file converter',
     'pdf converter',
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: '/',
     siteName: 'FileConverter',
-    title: 'FileConverter - Convert 110+ File Formats Instantly',
+    title: 'FileConverter - Convert 117 File Formats Instantly',
     description:
-      'Convert documents, images, spreadsheets, and presentations to 110+ formats. Fast, secure, and free.',
+      'Convert documents, images, spreadsheets, and presentations to 117 formats. Fast, secure, and free.',
     images: [
       {
         url: '/og-image.png',
@@ -45,9 +45,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FileConverter - Convert 110+ File Formats Instantly',
+    title: 'FileConverter - Convert 117 File Formats Instantly',
     description:
-      'Convert documents, images, spreadsheets, and presentations to 110+ formats. Fast, secure, and free.',
+      'Convert documents, images, spreadsheets, and presentations to 117 formats. Fast, secure, and free.',
     images: ['/og-image.png'],
   },
   robots: {

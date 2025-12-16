@@ -1,10 +1,10 @@
 # FileConverter - Multi-Format File Converter Platform
 
-A freemium SaaS platform for converting 110+ file formats across documents, images, spreadsheets, and presentations.
+A freemium SaaS platform for converting 117 file formats across documents, images, spreadsheets, and presentations.
 
 ## 🚀 Features
 
-- **110+ Format Support** - Convert between documents, images, spreadsheets, and presentations
+- **117 Format Support** - Convert between documents, images, spreadsheets, and presentations
 - **Fast & Secure** - Encrypted file processing with automatic cleanup
 - **Tiered Subscriptions** - Free, Starter, Professional, and Enterprise plans
 - **API Access** - RESTful API for programmatic conversions (Professional+)
@@ -354,5 +354,6 @@ Visit `/api/docs` for complete API documentation (Professional+ plans only).
 ---
 
 Built with ❤️ using Next.js, Supabase, and modern web technologies.
-#   p d f - c o n v e r t e r -  
+#   p d f - c o n v e r t e r - 
+ 
  

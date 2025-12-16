@@ -74,7 +74,7 @@ export default function CategoryFormatsPage() {
         <section className="bg-gradient-to-br from-primary via-orange-500 to-orange-600 text-white py-16 md:py-24">
           <div className="container-custom">
             <div className="max-w-3xl mx-auto text-center">
-              <div className="text-6xl mb-6">{info.icon}</div>
+              <div className="text-4xl mb-6">{info.icon}</div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">{info.name}</h1>
               <p className="text-xl md:text-2xl mb-8 text-orange-50">{info.description}</p>
               <Link href="/convert">
@@ -111,7 +111,7 @@ export default function CategoryFormatsPage() {
                     key={format.id}
                     className="p-6 hover:shadow-lg transition-shadow text-center"
                   >
-                    <div className="text-5xl mb-4">{format.icon}</div>
+                    <div className="text-3xl mb-4">{format.icon}</div>
                     <h3 className="text-xl font-semibold mb-2 text-neutral-black">
                       {format.name}
                     </h3>
@@ -139,7 +139,7 @@ export default function CategoryFormatsPage() {
                 {formats.slice(0, 4).map((format) => (
                   <Card key={format.id} className="p-6">
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="text-3xl">{format.icon}</div>
+                      <div className="text-2xl">{format.icon}</div>
                       <div>
                         <h3 className="font-semibold text-neutral-black">
                           Convert to/from {format.name}

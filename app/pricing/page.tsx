@@ -25,112 +25,41 @@ export default function PricingPage() {
             <h1 className="text-4xl md:text-5xl font-semibold mb-4">
               Simple, Transparent Pricing
             </h1>
-            <p className="text-lg text-neutral-medium-gray max-w-2xl mx-auto">
-              Choose the plan that fits your needs. All plans include secure
-              conversions and 24/7 support.
+            <p className="text-lg text-neutral-medium-gray max-w-2xl mx-auto mb-6">
+              Choose the plan that fits your needs. All plans in USD. Secure payments accepted worldwide.
             </p>
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap items-center justify-center gap-6 mb-6">
+              <div className="flex items-center gap-2 text-green-600">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="text-sm font-medium">SSL Secured</span>
+              </div>
+              <div className="flex items-center gap-2 text-blue-600">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="text-sm font-medium">30-Day Money-Back</span>
+              </div>
+              <div className="flex items-center gap-2 text-purple-600">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="text-sm font-medium">No Hidden Fees</span>
+              </div>
+            </div>
           </div>
 
           {/* Pricing Toggle */}
           <PricingToggle />
 
-          {/* Pricing Cards - India */}
+          {/* Pricing Cards - USD Only */}
           <div className="mb-16">
             <div className="text-center mb-8">
-              <Badge variant="info" className="mb-4">
-                🇮🇳 India Plans (INR)
-              </Badge>
-              <h2 className="text-2xl font-semibold mb-2">For Indian Users</h2>
+              <h2 className="text-2xl font-semibold mb-2">Choose Your Plan</h2>
               <p className="text-neutral-medium-gray">
-                Pay in Indian Rupees with PhonePe integration
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
-              <PricingCard
-                name="Free"
-                price={0}
-                currency="INR"
-                period="month"
-                conversions="200"
-                fileSize="100MB"
-                features={[
-                  'Basic file conversions',
-                  '100MB file size limit',
-                  'Ad-supported experience',
-                  'Email support',
-                ]}
-                ctaText="Get Started"
-                ctaLink="/auth/signup"
-                highlight={false}
-              />
-              <PricingCard
-                name="Starter"
-                price={49.99}
-                currency="INR"
-                period="month"
-                conversions="1,000"
-                fileSize="500MB"
-                features={[
-                  'Standard conversions',
-                  '500MB file size limit',
-                  'No advertisements',
-                  'Priority processing',
-                  'Email support',
-                ]}
-                ctaText="Choose Starter"
-                ctaLink="/checkout?plan=starter&currency=INR"
-                highlight={false}
-              />
-              <PricingCard
-                name="Professional"
-                price={199.99}
-                currency="INR"
-                period="month"
-                conversions="10,000"
-                fileSize="2GB"
-                features={[
-                  'Priority processing',
-                  '2GB file size limit',
-                  'API access',
-                  'Webhook support',
-                  'Batch processing',
-                  'Priority support',
-                ]}
-                ctaText="Choose Professional"
-                ctaLink="/checkout?plan=professional&currency=INR"
-                highlight={true}
-              />
-              <PricingCard
-                name="Enterprise"
-                price={399.99}
-                currency="INR"
-                period="month"
-                conversions="Unlimited"
-                fileSize="Unlimited"
-                features={[
-                  'Unlimited conversions',
-                  'Unlimited file size',
-                  'White-label option',
-                  '99.99% SLA',
-                  'Dedicated support',
-                  'Custom integrations',
-                ]}
-                ctaText="Contact Sales"
-                ctaLink="/contact?plan=enterprise"
-                highlight={false}
-              />
-            </div>
-          </div>
-
-          {/* Pricing Cards - International */}
-          <div className="mb-16">
-            <div className="text-center mb-8">
-              <Badge variant="info" className="mb-4">
-                🌍 International Plans (USD)
-              </Badge>
-              <h2 className="text-2xl font-semibold mb-2">For Global Users</h2>
-              <p className="text-neutral-medium-gray">
-                Pay with international credit/debit cards
+                All prices in USD. Accepted worldwide with secure payment processing.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto">

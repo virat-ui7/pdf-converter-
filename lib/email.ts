@@ -216,7 +216,7 @@ export async function sendWelcomeEmail(email: string, name: string): Promise<boo
         <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
           <h1 style="color: #FF6B35;">Welcome to FileConverter!</h1>
           <p>Hi ${name},</p>
-          <p>Thank you for joining FileConverter! You can now convert files to 110+ formats instantly.</p>
+          <p>Thank you for joining FileConverter! You can now convert files to 117 formats instantly.</p>
           <div style="text-align: center; margin: 30px 0;">
             <a href="${process.env.NEXTAUTH_URL}/convert" style="background: #FF6B35; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">Start Converting</a>
           </div>

@@ -1,0 +1,19 @@
+global:
+  scrape_interval: 30s
+  evaluation_interval: 30s
+  external_labels:
+    environment: 'staging'
+
+scrape_configs:
+  # FileConverter API metrics
+  - job_name: 'fileconverter-api'
+    static_configs:
+      - targets: ['api:3000']
+    metrics_path: '/api/metrics'
+    scrape_interval: 30s
+
+  # Prometheus itself
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
